@@ -115,6 +115,7 @@ namespace DoublyLinkedListEmail
                 {
                     // Yes
                     case 1:
+                        DeleteMail(mail);
                         Console.WriteLine("Mail deleted");
                         Console.ReadKey();
                         exit = true;
@@ -126,6 +127,20 @@ namespace DoublyLinkedListEmail
                 }
             }
             while (!exit);
+        }
+
+        // Delete mail action
+        private void DeleteMail(Node mail)
+        {
+            work.Previous.Next = work.Next;
+
+            if (work.Next != null)
+            {
+                work.Next.Previous= work.Previous;
+                work.Next= null;
+            }
+
+            work.Previous= null;
         }
 
         // Display interface to show and read each mail in certain DLL
@@ -184,6 +199,7 @@ namespace DoublyLinkedListEmail
                         // Delete mail
                         case 3:
                             DeleteMailDialog(work);
+                            exit = true;
                             break;
 
                         // Return
