@@ -11,7 +11,7 @@ namespace DoublyLinkedListEmail
 {
     class Program
     {
-        public static string userEmail = "user@email.com";
+        public static string userEmail = "localUser@email.com";
 
         static void Main(string[] args)
         {
