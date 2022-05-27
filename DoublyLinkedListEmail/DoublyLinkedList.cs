@@ -53,7 +53,7 @@ namespace DoublyLinkedListEmail
             string localBody = Console.ReadLine();
 
             // Assign the content of the email to the temporal node 
-            temp.From = Program.userEmail;
+            temp.From = Program.userEmailAddress;
             temp.To = localTo;
             temp.Subject = localSubject;
             temp.Body = localBody;
@@ -81,7 +81,7 @@ namespace DoublyLinkedListEmail
 
             // Assign the content of the email to the temporal node 
             temp.From = localFrom;
-            temp.To = Program.userEmail;
+            temp.To = Program.userEmailAddress;
             temp.Subject = localSubject;
             temp.Body = localBody;
 

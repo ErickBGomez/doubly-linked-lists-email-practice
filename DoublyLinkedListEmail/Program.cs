@@ -11,7 +11,7 @@ namespace DoublyLinkedListEmail
 {
     class Program
     {
-        public static string userEmail = "localUser@email.com";
+        public static string userEmailAddress = "localUser@email.com";
 
         static void Main(string[] args)
         {
@@ -37,7 +37,7 @@ namespace DoublyLinkedListEmail
                 Console.WriteLine("+-------------+\n");
 
                 Console.WriteLine("Welcome to DLL Email");
-                Console.WriteLine("Logged in as: " + userEmail);
+                Console.WriteLine("Logged in as: " + userEmailAddress);
                 Console.WriteLine("\nSelect one option:\n[1] Check Inbox\n[2] Check Sent Mails\n[3] Compose a new mail\n[0] Exit");
 
                 // Read user's input
