@@ -92,6 +92,42 @@ namespace DoublyLinkedListEmail
             work.Next = temp;
         }
 
+        // Delete a selected mail
+
+        private void DeleteMailDialog(Node mail)
+        {
+            bool exit = false;
+            int option;
+
+            do
+            {
+                // Title 
+                Console.WriteLine("+------------------+");
+                Console.WriteLine("     Delete mail    ");
+                Console.WriteLine("+------------------+\n");
+
+                // Ask the user if they want to delete the mail
+                Console.WriteLine("Do you want to delete this mail?:\n[1] Yes\n[0] No");
+
+                option = Int32.Parse(Console.ReadLine());
+
+                switch (option)
+                {
+                    // Yes
+                    case 1:
+                        Console.WriteLine("Mail deleted");
+                        Console.ReadKey();
+                        exit = true;
+                        break;
+
+                    case 0:
+                        exit = true;
+                        break;
+                }
+            }
+            while (!exit);
+        }
+
         // Display interface to show and read each mail in certain DLL
         public void ShowMails()
         {
@@ -120,7 +156,7 @@ namespace DoublyLinkedListEmail
                     Console.WriteLine("From:\n" + work.From + "\nTo:\n" + work.To + "\nSubject:\n" + work.Subject + "\nBody of the mail: \n" + work.Body);
 
                     // Show the options to do in the interface
-                    Console.WriteLine("\nOptions:\n[1] Go to the previous mail\n[2] Go to the next mail\n[0] Return to home");
+                    Console.WriteLine("\nOptions:\n[1] Go to the previous mail\n[2] Go to the next mail\n[3] Delete mail\n[0] Return to home");
 
                     // Read the user's input
                     option = Int32.Parse(Console.ReadLine());
@@ -145,6 +181,11 @@ namespace DoublyLinkedListEmail
                             }
                             break;
 
+                        // Delete mail
+                        case 3:
+                            DeleteMailDialog(work);
+                            break;
+
                         // Return
                         case 0:
                             exit = true;
@@ -163,7 +204,7 @@ namespace DoublyLinkedListEmail
         }
         
         // Returns the quantity of nodes in a list
-        public int Quantity()
+        private int Quantity()
         {
             int quantity = 0;
 
