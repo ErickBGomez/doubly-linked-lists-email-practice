@@ -165,10 +165,10 @@ namespace DoublyLinkedListEmail
                     Console.WriteLine("+------------------+\n");
 
                     // Shows the current index of the mail and the total amount of mails in the list
-                    Console.WriteLine($"Mail {index} of {totalMails}");
+                    Console.WriteLine($"Mail {index} of {totalMails}\n");
 
                     // Prints the from, to, subject and body
-                    Console.WriteLine("From:\n" + work.From + "\nTo:\n" + work.To + "\nSubject:\n" + work.Subject + "\nBody of the mail: \n" + work.Body);
+                    Console.WriteLine("From: " + work.From + "\nTo: " + work.To + "\nSubject:\n" + work.Subject + "\nBody of the mail: \n" + work.Body);
 
                     // Show the options to do in the interface
                     Console.WriteLine("\nOptions:\n[1] Go to the previous mail\n[2] Go to the next mail\n[3] Delete mail\n[0] Return to home");

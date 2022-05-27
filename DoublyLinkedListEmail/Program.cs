@@ -21,9 +21,10 @@ namespace DoublyLinkedListEmail
             DoublyLinkedList inbox = new DoublyLinkedList();
             DoublyLinkedList sentMails = new DoublyLinkedList();
 
-            inbox.ComposeMailAlt("test@gmail.com", "Important message", "");
-            inbox.ComposeMailAlt("support@fictionaldomain.com", "System support", "");
-            inbox.ComposeMailAlt("no-reply@thisemail.com", "A happy greetings", "");
+            // Later, find a way to change these lines of codes to something easier to manipulate
+            inbox.ComposeMailAlt("test@gmail.com", "Important message", "This is a more or less long message, just to let you know that I am really enjoying doing this project! Next, I warn you that the following message will only contain a Lorem Ipsum so you can see the length that a message can contain and be displayed on the screen.");
+            inbox.ComposeMailAlt("support@fictionaldomain.com", "System support", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consectetur leo eget commodo fringilla. In nec facilisis ex. Quisque tempus blandit lacus eu congue. Sed vitae eleifend felis, et ornare mi. Aenean quis auctor mi, at finibus massa. Fusce eu eros eu sapien tincidunt viverra. In id sodales velit, vitae eleifend quam. Nulla id mi velit. Duis tempus, diam at congue gravida, lorem elit finibus lorem, vel auctor neque elit quis orci. Sed quam nibh, dapibus quis nisi vel, viverra ultrices quam. Morbi quis tristique nisi. Phasellus et lobortis eros.");
+            inbox.ComposeMailAlt("erick@thisemail.com", "A message for you!", "Hello! This is Erick B. Gómez, thank you very much for downloading and trying my project! I am practically novice to GitHub, because, although I have created my account since last year, there have been few times that I have started to explore the functionality of this platform. Now, I'm getting used to it and I'm learning a lot! I hope to be able to continue doing more projects in the future, and I hope that you, who are reading this message, can support me on this beautiful journey as a programmer. I hope you have a happy day :D");
 
             // Startup interface
             do
@@ -69,7 +70,7 @@ namespace DoublyLinkedListEmail
             }
             while (!exit);
 
-            Console.WriteLine("\nExiting the system, thanks for prefering us\nMade with <3 by Erick B. Gómez");
+            Console.WriteLine("\nExiting the system. Thank you for using our services.\nMade with <3 by Erick B. Gómez");
             Console.ReadKey();
         }
     }
